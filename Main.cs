@@ -24,7 +24,13 @@ namespace CS161_Practice7
         private void driversTestButton_Click(object sender, EventArgs e)
         {
             Form form = new Drivers_License_Exam();
-            form.Show();    
+            form.Show();
+        }
+
+        private void worldSeriesButton_Click(object sender, EventArgs e)
+        {
+            Form form = new Word_Series_Champions();
+            form.Show();
         }
     }
 }

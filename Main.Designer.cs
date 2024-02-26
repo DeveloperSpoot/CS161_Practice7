@@ -74,6 +74,7 @@
             worldSeriesButton.TabIndex = 3;
             worldSeriesButton.Text = "World Series";
             worldSeriesButton.UseVisualStyleBackColor = true;
+            worldSeriesButton.Click += worldSeriesButton_Click;
             // 
             // nameSearchButton
             // 
