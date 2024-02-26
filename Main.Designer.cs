@@ -64,6 +64,7 @@
             driversTestButton.TabIndex = 2;
             driversTestButton.Text = "Drivers Test";
             driversTestButton.UseVisualStyleBackColor = true;
+            driversTestButton.Click += driversTestButton_Click;
             // 
             // worldSeriesButton
             // 
