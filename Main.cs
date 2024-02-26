@@ -14,5 +14,11 @@ namespace CS161_Practice7
             form.Show();
 
         }
+
+        private void chargeValidationButton_Click(object sender, EventArgs e)
+        {
+            Form form = new Charge_Account_Validation();
+            form.Show();
+        }
     }
 }

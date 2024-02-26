@@ -1,4 +1,4 @@
-﻿namespace CS161_Practice7.Problems
+﻿ namespace CS161_Practice7.Problems
 {
     public partial class Sales_Analysis : Form
     {

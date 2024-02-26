@@ -54,6 +54,7 @@
             chargeValidationButton.TabIndex = 1;
             chargeValidationButton.Text = "Charge Account Validation";
             chargeValidationButton.UseVisualStyleBackColor = true;
+            chargeValidationButton.Click += chargeValidationButton_Click;
             // 
             // driversTestButton
             // 
