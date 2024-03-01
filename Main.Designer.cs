@@ -94,6 +94,7 @@
             populationDataButton.TabIndex = 5;
             populationDataButton.Text = "Population Data";
             populationDataButton.UseVisualStyleBackColor = true;
+            populationDataButton.Click += populationDataButton_Click;
             // 
             // Main
             // 

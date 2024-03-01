@@ -38,5 +38,11 @@ namespace CS161_Practice7
             Form form = new NameSearch();
             form.Show();
         }
+
+        private void populationDataButton_Click(object sender, EventArgs e)
+        {
+            Form form = new US_Population();
+            form.Show();
+        }
     }
 }
