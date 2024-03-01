@@ -32,7 +32,7 @@
             teamsListBox = new ListBox();
             groupBox2 = new GroupBox();
             totalLabel = new Label();
-            button1 = new Button();
+            exitButton = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -56,6 +56,7 @@
             teamsListBox.Name = "teamsListBox";
             teamsListBox.Size = new Size(207, 244);
             teamsListBox.TabIndex = 0;
+            teamsListBox.SelectedValueChanged += teamsListBox_SelectedItemChanged;
             // 
             // groupBox2
             // 
@@ -77,27 +78,29 @@
             totalLabel.Text = "0";
             totalLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // exitButton
             // 
-            button1.BackColor = Color.IndianRed;
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(11, 369);
-            button1.Name = "button1";
-            button1.Size = new Size(229, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Exit";
-            button1.UseVisualStyleBackColor = false;
+            exitButton.BackColor = Color.IndianRed;
+            exitButton.ForeColor = SystemColors.Control;
+            exitButton.Location = new Point(11, 369);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(229, 23);
+            exitButton.TabIndex = 2;
+            exitButton.Text = "Exit";
+            exitButton.UseVisualStyleBackColor = false;
+            exitButton.Click += button1_Click;
             // 
             // Word_Series_Champions
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(251, 401);
-            Controls.Add(button1);
+            Controls.Add(exitButton);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Word_Series_Champions";
             Text = "Word_Series_Champions";
+            Load += Word_Series_Champions_Load;
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             ResumeLayout(false);
@@ -109,6 +112,6 @@
         private ListBox teamsListBox;
         private GroupBox groupBox2;
         private Label totalLabel;
-        private Button button1;
+        private Button exitButton;
     }
 }
