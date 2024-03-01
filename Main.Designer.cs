@@ -84,6 +84,7 @@
             nameSearchButton.TabIndex = 4;
             nameSearchButton.Text = "Name Search";
             nameSearchButton.UseVisualStyleBackColor = true;
+            nameSearchButton.Click += nameSearchButton_Click;
             // 
             // populationDataButton
             // 

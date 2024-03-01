@@ -9,7 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\net8.0-windows\popular_names.txt" />
     <Content Include="bin\Debug\net8.0-windows\Teams.txt" />
+    <Content Include="bin\Debug\net8.0-windows\USPopulation.txt" />
     <Content Include="bin\Debug\net8.0-windows\WorldSeriesWinners.txt" />
   </ItemGroup>
 
