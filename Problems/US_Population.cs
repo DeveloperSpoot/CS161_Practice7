@@ -32,22 +32,19 @@
                 int LastChange = 0;
 
                 int lastIndex = 0;
-                
+
                 /*
                  * IDK WHAt TO DO, TAKE A BREAK NATHANIEL......
                  * 
-                 * 
-                 * 
                  * COME BACK LATer.........
                  * 
-                 * 
-                 * 
                  * DON'T FORGEt ABOUT THIS.......
-                 * 
                  * 
                  * CLEAR YOUr MIND.........
                  * 
                  */
+
+                List<int> increaseChanges = new List<int>();
 
 
             }
