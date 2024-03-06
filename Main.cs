@@ -44,5 +44,11 @@ namespace CS161_Practice7
             Form form = new US_Population();
             form.Show();
         }
+
+        private void tikTacToeButton_Click(object sender, EventArgs e)
+        {
+            Form form = new TikTacToe();
+            form.Show();    
+        }
     }
 }

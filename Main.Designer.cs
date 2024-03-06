@@ -34,6 +34,7 @@
             worldSeriesButton = new Button();
             nameSearchButton = new Button();
             populationDataButton = new Button();
+            tikTacToeButton = new Button();
             SuspendLayout();
             // 
             // salesAnalysisButton
@@ -96,11 +97,22 @@
             populationDataButton.UseVisualStyleBackColor = true;
             populationDataButton.Click += populationDataButton_Click;
             // 
+            // tikTacToeButton
+            // 
+            tikTacToeButton.Location = new Point(180, 13);
+            tikTacToeButton.Name = "tikTacToeButton";
+            tikTacToeButton.Size = new Size(147, 23);
+            tikTacToeButton.TabIndex = 6;
+            tikTacToeButton.Text = "Tik Tac Toe";
+            tikTacToeButton.UseVisualStyleBackColor = true;
+            tikTacToeButton.Click += tikTacToeButton_Click;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(185, 273);
+            ClientSize = new Size(390, 273);
+            Controls.Add(tikTacToeButton);
             Controls.Add(populationDataButton);
             Controls.Add(nameSearchButton);
             Controls.Add(worldSeriesButton);
@@ -120,5 +132,6 @@
         private Button worldSeriesButton;
         private Button nameSearchButton;
         private Button populationDataButton;
+        private Button tikTacToeButton;
     }
 }
