@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Text.Json;
 
 namespace CS161_Practice7.Problems
 {
@@ -95,83 +96,37 @@ namespace CS161_Practice7.Problems
 
         private void checkForWinners()
         {
-            bool?[,] winingOption1 = new bool?[,] { {true, true, true },
-                                       {null, null, null },
-                                       {null, null, null } };
+            bool taylorWon = false;
+            bool travisWon = false;
 
-            bool?[,] winingOption2 = new bool?[,]{ {null, null, null },
-                                       {true, true, true },
-                                       {null, null, null } };
+            if ((gameSpace[0, 0] == true) && (gameSpace[0, 1] == true) && ( gameSpace[0, 2] == true)){ taylorWon = true; }
+            if ((gameSpace[1, 0] == true) && (gameSpace[1, 1] == true) && (gameSpace[1, 2] == true)) {taylorWon = true; }
+            if ((gameSpace[2, 0] == true) && (gameSpace[2, 1] == true) && (gameSpace[2, 2] == true)) {taylorWon = true;  }
 
-            bool?[,] winingOption3 = new bool?[,]{ {null, null, null },
-                                       {null, null, null },
-                                       {true, true, true } };
-
-            bool?[,] winingOption4 = new bool?[,]{ {true, null, null },
-                                       {true, null, null },
-                                       {true, null, null } };
-
-            bool?[,] winingOption5 = new bool?[,]{ {null, true, null },
-                                       {null, true, null },
-                                       {null, true, null } };
-
-            bool?[,] winingOption6 = new bool?[,]{ {null, null, true },
-                                       {null, null, true },
-                                       {null, null, true } };
-
-            bool?[,] winingOption7 = new bool?[,]{ {true, null, null },
-                                       {null, true, null },
-                                       {null, null, true } };
-
-            bool?[,] winingOption8 = new bool?[,]{ {null, null, true },
-                                       {null, true, null },
-                                       {true, null, null } };
-
-            bool?[,] player1Plays = new bool?[,]{ {null, null, null },
-                                       {null, null, null },
-                                       {null, null, null } };
-
-            bool?[,] player2Plays = new bool?[,]{ {null, null, null },
-                                       {null, null, null },
-                                       {null, null, null } };
-
-            for (int COLOUM = 0; COLOUM < gameSpace.GetLength(0); COLOUM++)
-            {
-                for (int ROW = 0; ROW < gameSpace.GetLength(1); ROW++)
-                {
-                    if(gameSpace[COLOUM, ROW] == true)
-                    {
-                        player1Plays[COLOUM, ROW] = true;
-                    }
-
-                    if(gameSpace[COLOUM, ROW] == false)
-                    {
-                        player2Plays[COLOUM, ROW] = true;
-                    }
-                   
-
-                }
-            }
-
-            if (player1Plays.Equals(winingOption1)){ MessageBox.Show("Taylor Won!");  return; }
-            if (player1Plays.Equals(winingOption2)) { MessageBox.Show("Taylor Won!"); return; }
-            if (player1Plays.Equals(winingOption3)) { MessageBox.Show("Taylor Won!"); return; }
-            if (player1Plays.Equals(winingOption4)) { MessageBox.Show("Taylor Won!"); return; }
-            if (player1Plays.Equals(winingOption5)) { MessageBox.Show("Taylor Won!"); return; }
-            if (player1Plays.Equals(winingOption6)) { MessageBox.Show("Taylor Won!"); return; }
-            if (player1Plays.Equals(winingOption7)) { MessageBox.Show("Taylor Won!"); return; }
-            if (player1Plays.Equals(winingOption8)) { MessageBox.Show("Taylor Won!"); return; }
-
-            if (player2Plays.Equals(winingOption1)) { MessageBox.Show("Travis Won!"); return; }
-            if (player2Plays.Equals(winingOption2)) { MessageBox.Show("Travis Won!"); return; }
-            if (player2Plays.Equals(winingOption3)) { MessageBox.Show("Travis Won!"); return; }
-            if (player2Plays.Equals(winingOption4)) { MessageBox.Show("Travis Won!"); return; }
-            if (player2Plays.Equals(winingOption5)) { MessageBox.Show("Travis Won!"); return; }
-            if (player2Plays.Equals(winingOption6)) { MessageBox.Show("Travis Won!"); return; }
-            if (player2Plays.Equals(winingOption7)) { MessageBox.Show("Travis Won!"); return; }
-            if (player2Plays.Equals(winingOption8)) { MessageBox.Show("Travis Won!"); return; }
+            if ((gameSpace[0, 0] == false) && (gameSpace[0, 1] == false) && (gameSpace[0, 2] == false)) { travisWon = true;  }
+            if ((gameSpace[1, 0] == false) && (gameSpace[1, 1] == false) && (gameSpace[1, 2] == false)) { travisWon = true;  }
+            if ((gameSpace[2, 0] == false) && (gameSpace[2, 1] == false) && (gameSpace[2, 2] == false)) { travisWon = true;  }
 
 
+            if ((gameSpace[0, 0] == true) && (gameSpace[1, 0] == true) && (gameSpace[2, 0] == true)) {taylorWon = true;  }
+            if ((gameSpace[0, 1] == true) && (gameSpace[1, 1] == true) && (gameSpace[2, 1] == true)) {taylorWon = true;  }
+            if ((gameSpace[0, 2] == true) && (gameSpace[1, 2] == true) && (gameSpace[2, 2] == true)) {taylorWon = true;  }
+
+            if ((gameSpace[0, 0] == false) && (gameSpace[1, 0] == false) && (gameSpace[2, 0] == false)) { travisWon = true;  }
+            if ((gameSpace[0, 1] == false) && (gameSpace[1, 1] == false) && (gameSpace[2, 1] == false)) { travisWon = true;  }
+            if ((gameSpace[0, 2] == false) && (gameSpace[1, 2] == false) && (gameSpace[2, 2] == false)) { travisWon = true;  }
+
+
+            if ((gameSpace[0, 0] == true) && (gameSpace[1, 1] == true) && (gameSpace[2, 2] == true)) {taylorWon = true;  }
+            if ((gameSpace[2, 0] == true) && (gameSpace[1, 1] == true) && (gameSpace[0, 2] == true)) {taylorWon = true;  }
+
+            if ((gameSpace[0, 0] == false) && (gameSpace[1, 1] == false) && (gameSpace[2, 2] == false)) { travisWon = true;  }
+            if ((gameSpace[2, 0] == false) && (gameSpace[1, 1] == false) && (gameSpace[0, 2] == false)) { travisWon = true;  }
+
+            if(travisWon && taylorWon) { MessageBox.Show("This Game Was A TIE!"); return; }
+            if (taylorWon) { MessageBox.Show("Taylor WON!"); }
+            if (travisWon) { MessageBox.Show("Travis WON!"); }
+            if(!travisWon && !taylorWon) { MessageBox.Show("No one won."); }
 
         }
 
